@@ -1,0 +1,96 @@
+JFDML JFormDesigner: "7.0.2.4.305" Java: "1.8.0_202-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, comp pnlButtons:::p::p, space ::204:x, comp hSpacer1:::p:16:p, space s:::p, comp pnlOutput:::p::p, space :::p}}"
+			"$verticalGroup": "par l {seq {par l {comp pnlButtons::t:::x, seq t {space :p:22:p, comp pnlOutput:::::x}, comp hSpacer1::::692:x}, space :::p}}"
+		} ) {
+			name: "this"
+			"title": "Semantik Erkennung"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {comp scrollPane2:::p:300:p, space ::9:x, comp scrollPane1:::p:300:p, space :::p}}"
+				"$verticalGroup": "par l {seq {par l {comp scrollPane2::::664:x, comp scrollPane1::::664:x}, space :::p}}"
+			} ) {
+				name: "pnlOutput"
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane1"
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "txtUnderstoodOutput"
+						"font": new java.awt.Font( "Consolas", 0, 12 )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane2"
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "txtLoadedText"
+						"font": new java.awt.Font( "Consolas", 0, 12 )
+					} )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {comp txtPath::t:::x, comp cbbFiles::l::133:x, seq {space :::p, par l {comp btnLoadFile::l::127:x, comp btnLoadPerfectFile::l::127:x, comp lblLoading::l::0:x, comp btnScan::l::127:x, comp txtPathLabel::l::127:x, comp btnPDFBoxTest::l::127:x, seq t {par t {comp lblSaveOutput::l::121:x, comp lblFile::l:::x}, space :::p}, comp btnSaveToTXT::l::127:x}}}"
+				"$verticalGroup": "par l {seq l {space :p:18:p, comp txtPathLabel:::p::p, space :::p, comp txtPath:::p::p, space s:::p, comp lblFile:::p::p, space :::p, comp cbbFiles:::p::p, space :p:46:p, comp btnLoadFile:::p::p, space :::p, comp btnLoadPerfectFile:::p::p, space u:::p, comp lblLoading:::p::p, space :p:35:p, comp btnScan:::p::p, space :::p, comp btnSaveToTXT:::p::p, space :::p, comp lblSaveOutput:::p::p, space :p:41:p, comp btnPDFBoxTest:::p::p, space ::234:x}}"
+			} ) {
+				name: "pnlButtons"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblLoading"
+					"text": "Loading..."
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "cbbFiles"
+					addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "cbbFilesItemStateChanged", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblFile"
+					"text": "Select file:"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "txtPath"
+					"text": "Test-Bon.jpg"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "txtPathKeyReleased", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "btnLoadFile"
+					"text": "Load File"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnLoadFileActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "btnLoadPerfectFile"
+					"text": "Load Perfect File"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "btnScan"
+					"text": "Scan Text (EDEKA)"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnScanActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JTextPane" ) {
+					name: "txtPathLabel"
+					"editable": false
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"text": "File must be in: "
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "btnPDFBoxTest"
+					"text": "PDFBox test position"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnPDFBoxTestActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "btnSaveToTXT"
+					"text": "Save as out.txt File"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnSaveToTXTActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblSaveOutput"
+				} )
+			} )
+			add( new FormComponent( "com.jformdesigner.designer.wrapper.HSpacer" ) {
+				name: "hSpacer1"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1000, 730 )
+		} )
+	}
+}
